@@ -121,10 +121,16 @@ public void setFaturamentoAnual(BigDecimal faturamentoAnual){
     this.faturamentoAnual = faturamentoAnual;
 }
 
+
+
 public  void setNivel(NivelCliente nivel){
     this.nivel = nivel;
 }
 
+public NivelCliente getNivel(){
+    return  nivel;
+
+}
 
 public StatusCliente getStatus(){
     return status;

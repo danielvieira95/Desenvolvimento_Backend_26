@@ -28,6 +28,8 @@ private  String nome;
 @Column (name = "email", nullable = false, unique = true, length = 150)
 private  String email;
 
+@Column (name = "senha", nullable = false, unique = true, length = 150)
+private  String senha;
 
 @Column (name = "telefone", length = 30)
 private  String telefone;
@@ -44,10 +46,11 @@ public Consultor(){
 
 // Cria outro construtor com parametros para iniciar
 
-public Consultor(String nome, String email, String telefone){
+public Consultor(String nome, String email, String senha,String telefone){
     this.nome = nome;
     this.email = email;
     this.telefone = telefone;
+    this.senha = senha;
 }
 
 public Long getIdLong(){
@@ -71,6 +74,12 @@ public String getEmail(){
     return  email;
 }
 
+public void setSenha(String senha){
+    this.senha = senha;
+}
+public String getSenha(){
+    return senha;
+}
 public void setEmail(String email){
     this.email = email;
 }
@@ -79,7 +88,7 @@ public String getTelefone(){
     return telefone;
 }
 
-public  void setTelefone(){
+public  void setTelefone(String telefone){
     this.telefone = telefone;
 }
 
